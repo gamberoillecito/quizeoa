@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta title="Quiz economia">
+	<meta charset="utf-8">	
+	<link rel="stylesheet" href="./../../video.css?v=1.5" type="text/css" media="screen">
+	<script  src="./quizOld.js?v=2.8"></script>
+</head>
+<body onload="main()" style="background-color: rgba(0,0,0,0.8);">
+	<h1> Quiz EOA OLD VERSION</h1>
+	<p> La nuova versione di questa pagina &egrave; disponibile <a href="./../index.html">qui</a>
+
+	<!-- Contiene info come orologio, risposte date e numero progressivo della domanda -->
+	<div id="contenitoreInfo" class="sfondoSemiT bordato">
+		<div>
+			<p id="orologio">🕐</p>
+			<p id="timer">00 : 00</p>
+		</div>
+		<div>
+			<p> Risposte <br>date </p>
+			<p>:</p>
+			<p id="contatore">0</p>
+		</div>
+		<div>
+			<p> Numero <br> domanda </p>
+			<p>:</p>
+			<p id="numeroDomanda"></p>
+		</div>
+	</div>
+
+
+	<!-- Contiene la domanda e le opzioni -->
+	<div id="contenitoreQuiz" class="sfondoSemiT">
+		<span id="domanda"></span>
+		<br>
+		<div id="risposte"></div>
+	</div>
+
+	<!-- Contiene il menu per selezionare i moduli di cui si voglione le domande nel quiz -->
+	<div id="contenitoreSelezioneModuli" class="sfondoSemiT bordato">
+		<span> Sezioni </span>
+		<div id="divModuli"></div>
+	</div>
+
+	<!-- Contiene i pulsanti per gestire il quiz -->
+	<div id="contenitoreBottoni">
+		<input id="prossima" type="button" value="Inizia"></input>
+		<input id="verifica" type="button" value="Conferma" disabled="true"></input>
+		<input id="fine" type="button" value="Fine quiz" disabled="true"></input>
+	</div>
+
+	<!-- Contiene lo switch per passare da modalità casuale a sequenziale -->
+	<div id="contenitoreSwitch">
+		<span id="ordineCasuale"> Ordine <br> Casuale </span>
+		<label class="switch">
+		  <input type="checkbox" id="randomSwitch" checked>
+		  <span class="slider round"></span>
+		</label>
+		<label id="labelInizio" style="opacity: 0%;"> Inizio:
+			<input type="number" id="inputInizio" min="0" style="opacity: 0%;">
+		</label>
+	</div>
+
+	<!-- Contiene il messaggio che appare alla fine del quiz -->
+	<div id="messaggioFinale" class="sfondoSemiT" style="display: none"></div>
+
+	<input type="button" id = "cambiaSfondo" value = "Cambia sfondo">
+
+	<div id="contenitoreTimestamp">
+		<a href="https://forms.gle/fvrWzSLbycPK5Pea6" target="_blank"> Segnala un errore</a>
+		<div id="divTimestamp" style="opacity: 0%;">
+			<span id="timestampDomanda" class="light sfondoSemiT"> </span>
+			<input id="copiaTimestamp" type="button" value="Copia">
+		</div>
+
+	<input type="button" id="bottonePopup" value = "?">
+	</div>
+
+	<!-- The Modal -->
+	<div id="popup" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span id="chiudiPopup" class="close">&times;</span>
+		    <h2>Disclaimer</h2>
+		  </div>
+		  <div class="modal-body">
+		    <p>Questo sito &egrave; fatto da studenti e per studenti, pertanto viene fornito "cos&igrave; com'&egrave;" e senza nessuna
+		    	garanzia.<br> In caso dovessi trovare errori li puoi segnalare tramite il link "Segnala un errore".
+		    	<hr>
+		    	Questa pagina non verr&agrave; pi&ugrave; mantenuta, vai alla <a href="./../index.html">nuova versione</a>.
+		    	<hr>
+		    	<a href="./changelog.html" target="_blank">Changelog</a>
+		    </p>
+		  </div>
+		</div>
+
+	</div>
+
+</body>
+
+
+</html>

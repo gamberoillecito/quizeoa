@@ -1,0 +1,74 @@
+body :not(.stampa){
+	display: none;
+	position: relative;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+
+ pre {
+ 	white-space: pre-wrap;
+ 	font-family: inherit;
+ 	font-size: small;
+ }
+ 
+ b {
+ 	font-weight: bold;
+ 	color: rgb(240, 70, 95);
+ }
+
+ .giusteDaStampare {
+ 	width: fit-content;
+ 	max-width: 1cm;
+ 	font-size: smaller;
+ 	position: absolute;
+ 	right: 0;
+ 	top: 50%;
+ 	text-align: center;
+ 	color: green;
+ }
+
+ .domandaDaStampare, .risposteDaStampare{
+ 	max-width: 16cm;
+ }
+
+.risposteDaStampare::after {
+	content: " ";
+	position: absolute;
+	height: 100%;
+	width: 2px;
+	border-right: solid thin black;
+	left: 17cm;
+	top: 0;
+}
+
+ .bloccoDaStampare {
+ 	position: relative;
+ 	border-bottom: solid thin black;
+ 	padding: 1em;
+ }
+
+.numeroDaStampare {
+	float: left;
+	width: fit-content;
+	top: 0;
+	color: rgb(228, 210, 54);
+	margin-right: 1em;
+}
+
+#scrittaGiuste {
+	position: absolute;
+	top: 0;
+	right: 0;
+ 	color: green;
+}
+
+.cerchietto {
+	border: solid thin green;
+	border-radius: 50%;
+	text-align: center;
+	width: fit-content;
+	height: fit-content;
+	padding: 0;
+	margin:0.2em;
+	font-size: 1em;
+}
