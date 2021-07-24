@@ -513,7 +513,7 @@ function mostraSoluzione() {
 
 // Mostra su schermo domanda e opzioni con checkbox personalizzata, buona fortuna a capirci qualcosa
 function mostraDomanda(indice) {
-    numeroDomanda.textContent = String(indice + 2);
+    numeroDomanda.textContent = String(Number(indice) + 2);
     domanda.textContent = getDomanda(indice).replace(/^\s+/g, ''); // Tolgo le righe vuote e gli spazi all'izio e alla fine
     arrayGiuste = getGiuste(indice);
     arraySbagliate = getSbagliate(indice);
