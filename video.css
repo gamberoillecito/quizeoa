@@ -1,539 +1,545 @@
-		body {
-			font-family: "Trebuchet MS", Helvetica, sans-serif;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			/*background-image: url("./martini.jpg");*/
-			background-size: cover;
-			background-position: center;
-			color: rgb(230, 230, 230);
-		}
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*background-image: url("./martini.jpg");*/
+	background-size: cover;
+	background-position: center;
+	color: rgb(230, 230, 230);
+}
 
-		h3 {
-			max-width: 50%;
-			font-size: smaller;
-			text-align: center;
-		}
+h3 {
+	max-width: 50%;
+	font-size: smaller;
+	text-align: center;
+}
 
-		#contenitoreQuiz {
-			border: solid thin black;
-			border-radius: 1em;
-			min-width: 25em;
-            max-width: 50%;
-			width: fit-content;
-			min-height: 10em;
-			height: fit-content;
-			padding: 2%;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
+.news::before {
+	content: "Novità: ";
+	font-size: larger;
+	color: rgb(240, 70, 95);
+}
 
-		hr {
-			border: 1.2px solid white;
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
+#contenitoreQuiz {
+	border: solid thin black;
+	border-radius: 1em;
+	min-width: 25em;
+	max-width: 50%;
+	width: fit-content;
+	min-height: 10em;
+	height: fit-content;
+	padding: 2%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
 
-		pre {
-			font-family: inherit;
-			font-size: inherit;
-		 	white-space: pre-wrap;
-		}
+hr {
+	border: 1.2px solid white;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
 
-		.frequenza {
-			font-size: small;
-		}
+pre {
+	font-family: inherit;
+	font-size: inherit;
+	 white-space: pre-wrap;
+}
 
-		#spanSoluzione {
-			/*max-width: 10%;*/
-		}
+.frequenza {
+	font-size: small;
+}
 
-		#contenitoreQuiz.giusta {
-			border: solid thick rgb(51, 204, 76);
-		}
+#spanSoluzione {
+	/*max-width: 10%;*/
+}
 
-		#contenitoreQuiz.sbagliata {
-			border: solid thick rgb(240, 70, 95);
-		}
+#contenitoreQuiz.giusta {
+	border: solid thick rgb(51, 204, 76);
+}
 
-		#messaggioFinale {
-			border: solid thin black;
-			border-radius: 1em;
-			padding: 1em;
-		}
+#contenitoreQuiz.sbagliata {
+	border: solid thick rgb(240, 70, 95);
+}
 
-		strong {
-			color: orange;
-		}
+#messaggioFinale {
+	border: solid thin black;
+	border-radius: 1em;
+	padding: 1em;
+}
 
-		input[type=button], input[type=submit], button {
-			font-family: "Trebuchet MS", Helvetica, sans-serif;
-			padding: 5px 10px;
-			height: 30px;
-			border-radius: 15px;
-			border-style: none;
-			background-color: rgb(228, 210, 54);
-			text-decoration: none;
-			color: rgb(36, 36, 36);
-			cursor: pointer;
-			transition: color 0.7s;
-			transition: background-color 0.7s;
-			margin: 10px;
-		}
+strong {
+	color: orange;
+}
 
-		input[type=button]:hover, input[type=submit]:hover, button:hover {
-			background-color: rgb(66, 65, 65);
-			color: white;
-			transition: background-color 0.7s;
-			transition: color 0.7s;
-		}
+input[type=button], input[type=submit], button {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	padding: 5px 10px;
+	height: 30px;
+	border-radius: 15px;
+	border-style: none;
+	background-color: rgb(228, 210, 54);
+	text-decoration: none;
+	color: rgb(36, 36, 36);
+	cursor: pointer;
+	transition: color 0.7s;
+	transition: background-color 0.7s;
+	margin: 10px;
+}
 
-		input[type=button]:disabled, input[type=submit]:disabled, button:disabled {
-			background-color: rgb(141, 141, 141);
-			color: rgb(53, 53, 53);
-			cursor: auto;
-		}
+input[type=button]:hover, input[type=submit]:hover, button:hover {
+	background-color: rgb(66, 65, 65);
+	color: white;
+	transition: background-color 0.7s;
+	transition: color 0.7s;
+}
 
-		input[type=number] {
-			background-color: rgb(228, 210, 54);
-			font-family: "Trebuchet MS", Helvetica, sans-serif;
-			font-size: 1.1em;
-			color: rgb(36, 36, 36);
-			border-style: none;
-			padding: 5px;
-			height: 20px;
-			width: 3em;
-			border-radius: 10px;
-			margin: 10px;
-		}
+input[type=button]:disabled, input[type=submit]:disabled, button:disabled {
+	background-color: rgb(141, 141, 141);
+	color: rgb(53, 53, 53);
+	cursor: auto;
+}
 
-		#contenitoreBottoni {
-			margin: 1em;
-		}
+input[type=number] {
+	background-color: rgb(228, 210, 54);
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 1.1em;
+	color: rgb(36, 36, 36);
+	border-style: none;
+	padding: 5px;
+	height: 20px;
+	width: 3em;
+	border-radius: 10px;
+	margin: 10px;
+}
 
-		#domanda {
-			font-size: 1.2em;
-		}
+#contenitoreBottoni {
+	margin: 1em;
+}
 
-		#risposte {
-			margin-top:  1em;
-		}
+#domanda {
+	font-size: 1.2em;
+}
 
-		.light {
-			color: rgba(0,0,0,0.4);
-		}
+#risposte {
+	margin-top:  1em;
+}
 
-		.sfondoSemiT {
-			background-color: rgba(255,255,255,0.2);
-		}
+.light {
+	color: rgba(0,0,0,0.4);
+}
 
-		.svela.sbagliata {
-			color: rgb(240, 70, 95);
-		}
-		.svela.giusta {
-			color: rgb(51, 204, 76);
-		}
+.sfondoSemiT {
+	background-color: rgba(255,255,255,0.2);
+}
 
-		#contenitoreTimestamp{
-			position: fixed;
-			left: 2em;
-			bottom: 2em;
-			border-radius: 0.1em;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
+.svela.sbagliata {
+	color: rgb(240, 70, 95);
+}
+.svela.giusta {
+	color: rgb(51, 204, 76);
+}
 
-		#contenitoreTimestamp input[type=button] {
-			background-color: rgba(255,255,255,0.2);
-			/*padding: 5px 10px;*/
-			height: fit-content;
-			border-radius: 5%;
-		}
+#contenitoreTimestamp{
+	position: fixed;
+	left: 2em;
+	bottom: 2em;
+	border-radius: 0.1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-		#contenitoreTimestamp>* {
-			margin: 0.5em;
-		}
+#contenitoreTimestamp input[type=button] {
+	background-color: rgba(255,255,255,0.2);
+	/*padding: 5px 10px;*/
+	height: fit-content;
+	border-radius: 5%;
+}
 
-		#contenitoreTimestamp input[type=button]:hover {
-			background-color: rgb(66, 65, 65);
-		}
+#contenitoreTimestamp>* {
+	margin: 0.5em;
+}
 
-		#divTimestamp {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
+#contenitoreTimestamp input[type=button]:hover {
+	background-color: rgb(66, 65, 65);
+}
 
-		#contenitoreInfo {
-			position: absolute;
-			left: 4em;
-			top: 3em;
-			text-align: center;
-			padding: 1em;
-			font-size: larger;
-		}
+#divTimestamp {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-		.bordato {
-			border-top: solid thick rgb(230, 230, 230);
-			border-bottom: solid thick rgb(230, 230, 230);
-			border-radius: 1em;
-			padding: 1em;
-		}
+#contenitoreInfo {
+	position: absolute;
+	left: 4em;
+	top: 3em;
+	text-align: center;
+	padding: 1em;
+	font-size: larger;
+}
 
-		#contenitoreSelezioneModuli {
-			position: absolute;
-			right: 4em;
-			top: 3em;
-		}
+.bordato {
+	border-top: solid thick rgb(230, 230, 230);
+	border-bottom: solid thick rgb(230, 230, 230);
+	border-radius: 1em;
+	padding: 1em;
+}
 
-		#contenitoreSelezioneModuli>span {
-			font-size: large;
-		}
+#contenitoreSelezioneModuli {
+	position: absolute;
+	right: 4em;
+	top: 3em;
+}
 
-		#divModuli {
-			margin-top: 1em;
-		}
+#contenitoreSelezioneModuli>span {
+	font-size: large;
+}
 
-		#contenitoreSegnalazioni {
-			position: absolute;
-			right: 4em;
-			top: 3em;
-		}
+#divModuli {
+	margin-top: 1em;
+}
+
+#contenitoreSegnalazioni {
+	position: absolute;
+	right: 4em;
+	top: 3em;
+}
 /*roba per schermi stretti*/
-		@media screen and (max-width: 70em) {
-			#contenitoreInfo {
-				position: relative;
-				left: 0;
-				top: 0;
-				margin-bottom: 1em;
-				padding: 0 1em;
-				display: flex;
-				flex-direction: row;
-			}
+@media screen and (max-width: 70em) {
+	#contenitoreInfo {
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-bottom: 1em;
+		padding: 0 1em;
+		display: flex;
+		flex-direction: row;
+	}
 
-			#contenitoreSelezioneModuli {
-				position: static;
-				margin-top: 1em;
-			}
+	#contenitoreSelezioneModuli {
+		position: static;
+		margin-top: 1em;
+	}
 
-			#divModuli label{
-        		display: inline-block;
-        		padding: 0 1.5em;
-        	}
+	#divModuli label{
+		display: inline-block;
+		padding: 0 1.5em;
+	}
 
-        	#contenitoreTimestamp {
-        		position: absolute;
-        		left: 1em;
-        		top: 1em;
-        	}
-		}
+	#contenitoreTimestamp {
+		position: absolute;
+		left: 1em;
+		top: 1em;
+	}
+}
 
-		a:link {
-			color: rgb(228, 210, 54);
-			text-decoration: none;
-			padding: 3px;
-			border-radius: 15px;
-			border-style: none;
-			transition: color 0.7s;
-		}
+a:link {
+	color: rgb(228, 210, 54);
+	text-decoration: none;
+	padding: 3px;
+	border-radius: 15px;
+	border-style: none;
+	transition: color 0.7s;
+}
 
-		a:visited {
-			color: rgb(228, 210, 54);
-			transition: color 0.7s;
-		}
+a:visited {
+	color: rgb(228, 210, 54);
+	transition: color 0.7s;
+}
 
-		a:hover {
-			text-shadow: 4px 4px 2px rgba(66, 65, 65, 1);
-			color: white;
-			transition: background-color 0.7s;
-			transition: color 0.7s;
-		}
+a:hover {
+	text-shadow: 4px 4px 2px rgba(66, 65, 65, 1);
+	color: white;
+	transition: background-color 0.7s;
+	transition: color 0.7s;
+}
 
-        #fine {
-        	background-color: rgb(240, 70, 95);
-        }
+#fine {
+	background-color: rgb(240, 70, 95);
+}
 
-        #verifica {
-        	background-color: rgb(51, 204, 76);
-        }
+#verifica {
+	background-color: rgb(51, 204, 76);
+}
 
-        #fine:hover{
-			background-color: rgb(66, 65, 65);
-        }
+#fine:hover{
+	background-color: rgb(66, 65, 65);
+}
 
-        #fine:disabled{
-			background-color: rgb(141, 141, 141);
-        }
+#fine:disabled{
+	background-color: rgb(141, 141, 141);
+}
 
-        #verifica:hover{
-			background-color: rgb(66, 65, 65);
-        }
+#verifica:hover{
+	background-color: rgb(66, 65, 65);
+}
 
-        #verifica:disabled{
-			background-color: rgb(141, 141, 141);
-        }
+#verifica:disabled{
+	background-color: rgb(141, 141, 141);
+}
 
-        #contenitoreInfo div {
-        	display: flex;
-        	flex-direction: row;
-        	align-items: center;
-        }
-        
+#contenitoreInfo div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
-        #contenitoreInfo p {
-        	margin: 10px;
-        }
 
-        /*#bottonePopup {
-        	position: fixed;
-        	right: 1em;
-        	bottom: 1em;
-        }*/
+#contenitoreInfo p {
+	margin: 10px;
+}
 
-        #labelInizio,#inputInizio {
+/*#bottonePopup {
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+}*/
 
-		  -webkit-transition: .4s;
-		  transition: .4s;
-        }
+#labelInizio,#inputInizio {
 
-        /*checkmark*/
-        /* The container */
-		.container {
-		  display: block;
-		  position: relative;
-		  padding-left: 35px;
-		  margin-bottom: 12px;
-		  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
-		  /*font-size: 22px;*/
-		  -webkit-user-select: none;
-		  -moz-user-select: none;
-		  -ms-user-select: none;
-		  user-select: none;
-		}
+/*checkmark*/
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
 
-		/* Hide the browser's default checkbox */
-		.container input {
-		  position: absolute;
-		  opacity: 0;
-		  cursor: pointer;
-		  height: 0;
-		  width: 0;
-		}
+  /*font-size: 22px;*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-		/* Create a custom checkbox */
-		.checkmark {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
-		  border-radius: 25%;
-		  height: 1em;
-		  width: 1em;
-		  background-color: #eee;
-		}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-		/* On mouse-over, add a grey background color */
-		.container:hover input ~ .checkmark {
-		  background-color: rgb(66, 65, 65);
-		}
+  border-radius: 25%;
+  height: 1em;
+  width: 1em;
+  background-color: #eee;
+}
 
-		/* When the checkbox is checked, add a yellow background */
-		.container input:checked ~ .checkmark {
-		  background-color: rgb(228, 210, 54);
-		}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: rgb(66, 65, 65);
+}
 
-		.container input:disabled ~ .checkmark {
-		  background-color: rgb(66, 65, 65);
-		  cursor: default;
-		}
+/* When the checkbox is checked, add a yellow background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(228, 210, 54);
+}
 
-		/* Create the checkmark/indicator (hidden when not checked) */
-		.checkmark:after {
-		  content: "";
-		  position: absolute;
-		  display: none;
-		}
+.container input:disabled ~ .checkmark {
+  background-color: rgb(66, 65, 65);
+  cursor: default;
+}
 
-		/* Show the checkmark when checked */
-		.container input:checked ~ .checkmark:after {
-		  display: block;
-		}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
-		/* Style the checkmark/indicator */
-		.container .checkmark:after {
-		  left: 0.25em;
-		  top: 0.1em;
-		  width: 0.25em;
-		  height: 0.5em;
-		  border: solid white;
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
 
-		  border-width: 0 3px 3px 0;
-		  -webkit-transform: rotate(45deg);
-		  -ms-transform: rotate(45deg);
-		  transform: rotate(45deg);
-		}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.25em;
+  top: 0.1em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
 
-        /*slider*/
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
-        .switch {
-		  position: relative;
-		  display: inline-block;
-		  width: 60px;
-		  height: 34px;
-		}
+/*slider*/
 
-		.switch input { 
-		  opacity: 0;
-		  width: 0;
-		  height: 0;
-		}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
-		.slider {
-		  position: absolute;
-		  cursor: pointer;
-		  top: 0;
-		  left: 0;
-		  right: 0;
-		  bottom: 0;
-		  background-color: #ccc;
-		  -webkit-transition: .4s;
-		  transition: .4s;
-		}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-		.slider:before {
-		  position: absolute;
-		  content: "";
-		  height: 26px;
-		  width: 26px;
-		  left: 4px;
-		  bottom: 4px;
-		  background-color: white;
-		  -webkit-transition: .4s;
-		  transition: .4s;
-		}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
-		input:checked + .slider {
-		  background-color: rgb(228, 210, 54);
-		}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
-		input:focus + .slider {
-		  box-shadow: 0 0 1px rgb(228, 210, 54);
-		}
+input:checked + .slider {
+  background-color: rgb(228, 210, 54);
+}
 
-		input:checked + .slider:before {
-		  -webkit-transform: translateX(26px);
-		  -ms-transform: translateX(26px);
-		  transform: translateX(26px);
-		}
-        .slider.round {
-		  border-radius: 34px;
-		}
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(228, 210, 54);
+}
 
-		.slider.round:before {
-		  border-radius: 50%;
-		}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
 
-		#contenitoreSwitch {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
+.slider.round:before {
+  border-radius: 50%;
+}
 
-		#contenitoreSwitch>* {
-			margin: 1em;
-		}
+#contenitoreSwitch {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#contenitoreSwitch>* {
+	margin: 1em;
+}
 
 /* The Modal (background) */
-	.modal {
-	  display: none; /* Hidden by default */
-	  position: fixed; /* Stay in place */
-	  z-index: 1; /* Sit on top */
-	  padding-top: 100px; /* Location of the box */
-	  left: 0;
-	  top: 0;
-	  width: 100%; /* Full width */
-	  height: 100%; /* Full height */
-	  overflow: auto; /* Enable scroll if needed */
-	  background-color: rgb(0,0,0); /* Fallback color */
-	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	}
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-	/* Modal Content */
-	.modal-content {
-	  position: relative;
-	  background-color: rgba(0,0,0,0.6);
-	  color: rgb(230, 230, 230);
-	  margin: auto;
-	  padding: 0;
-	  border-radius: 1em;
-	  width: 40%;
-	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	  -webkit-animation-name: animatetop;
-	  -webkit-animation-duration: 0.4s;
-	  animation-name: animatetop;
-	  animation-duration: 0.4s
-	}
+/* Modal Content */
+.modal-content {
+position: relative;
+background-color: rgba(0,0,0,0.6);
+color: rgb(230, 230, 230);
+margin: auto;
+padding: 0;
+border-radius: 1em;
+width: 40%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
 
-	/* Add Animation */
-	@-webkit-keyframes animatetop {
-	  from {top:-300px; opacity:0} 
-	  to {top:0; opacity:1}
-	}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
 
-	@keyframes animatetop {
-	  from {top:-300px; opacity:0}
-	  to {top:0; opacity:1}
-	}
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
 
-	/* The Close Button */
-	.close {
-	  color: white;
-	  float: right;
-	  font-size: 28px;
-	  font-weight: bold;
-	}
+/* The Close Button */
+.close {
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
 
-	.close:hover,
-	.close:focus {
-	  color: #000;
-	  text-decoration: none;
-	  cursor: pointer;
-	}
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
 
-	.modal-header {
-	  padding: 2px 16px;
-	  background-color: rgb(240, 70, 95);
-	  color: rgb(230, 230, 230);
+.modal-header {
+padding: 2px 16px;
+background-color: rgb(240, 70, 95);
+color: rgb(230, 230, 230);
 
-	  border-top-left-radius: 1em;
-	  border-top-right-radius: 1em;
-	}
+border-top-left-radius: 1em;
+border-top-right-radius: 1em;
+}
 
-	.modal-body {padding: 2px 16px;}
+.modal-body {padding: 2px 16px;}
 
-	.modal-footer {
-	  padding: 2px 16px;
-	  background-color: #5cb85c;
-	  color: white;
-	}
+.modal-footer {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
 
-	.indicatoreBottonePopup {
-		background-color: rgba(255,255,255,0.2);
-		padding: 5px 10px;
-		height: fit-content;
-		margin: 5px;
-		border-radius: 5%;
-	}
+.indicatoreBottonePopup {
+background-color: rgba(255,255,255,0.2);
+padding: 5px 10px;
+height: fit-content;
+margin: 5px;
+border-radius: 5%;
+}
 
-	#cartellaDrive {
-		background-color: rgb(240, 70, 95);
-		padding: 0.2em;
-		border-radius: 0.1em;
-	}
+#cartellaDrive {
+background-color: rgb(240, 70, 95);
+padding: 0.2em;
+border-radius: 0.1em;
+}
 
-	.stampa {
-		display: none;
-	}
+.stampa {
+display: none;
+}

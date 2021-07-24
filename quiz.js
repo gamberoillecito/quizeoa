@@ -231,8 +231,20 @@ function randomSwitchClickHandler() {
 }
 
 function inizioValueChangeHandler() {
-    indiceDomandaCorrente = inputInizio.value;
+    
+    if (inputInizio.value < 2) {
+        prossima.disabled = 1;
+    }
+    else {
+        prossima.disabled = 0;
+        prossima.value = "Vai a " + ((String(inputInizio.value) == "") ? "0" : String(inputInizio.value));
+    }
+    var indiceVero = (inputInizio.value >= 2) ? (inputInizio.value - 2) : 2;
+    // indiceDomandaCorrente = inputInizio.value - 2;
+    indiceDomandaCorrente = indiceVero;
+
     prossima.value = "Vai a " + ((String(inputInizio.value) == "") ? "0" : String(inputInizio.value));
+    // prossima.value = "Vai a " + ((String(indiceVero) == "") ? "0" : String(indiceVero));
 }
 
 
@@ -501,7 +513,7 @@ function mostraSoluzione() {
 
 // Mostra su schermo domanda e opzioni con checkbox personalizzata, buona fortuna a capirci qualcosa
 function mostraDomanda(indice) {
-    numeroDomanda.textContent = String(indice);
+    numeroDomanda.textContent = String(indice + 2);
     domanda.textContent = getDomanda(indice).replace(/^\s+/g, ''); // Tolgo le righe vuote e gli spazi all'izio e alla fine
     arrayGiuste = getGiuste(indice);
     arraySbagliate = getSbagliate(indice);
