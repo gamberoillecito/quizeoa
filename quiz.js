@@ -36,10 +36,17 @@ var moduliSelezionati = []; // Contiene gli indici dei moduli attualmente selezi
 
 function getResponse() {
     var url = "https://docs.google.com/spreadsheets/d/1e2CCZyObH5hRTmX7IVEVNlwMLxvw1Bjm3kJaDEyYLVA/edit?usp=sharing";
-    getTableData(url, ef);
+    getTableData(url, f);
+}
+
+function f() {
+    alert("Attenzione, il sito non funziona bene e sta usando una lista di domande di backup che potrebbe non essere aggiornata.")
+    tutteDomande = JSON.parse(backupJSON);
+    main();
 }
 
 function ef(d) {
+    console.log("ef viene chiamata");
     tutteDomande = d;
     main();
 }

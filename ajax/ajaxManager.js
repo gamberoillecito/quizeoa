@@ -39,14 +39,15 @@ function httpGet(url) {
 	});
 }
 
-function getTableData(tableUrl) {
+function getTableData(tableUrl, fail) {
 	var tableJSON = {};
 	var tableIdRegex = "\/spreadsheets\/d\/([a-zA-Z0-9-_]+)";
 	var tableId = tableUrl.match(tableIdRegex)[1];
 	var url = `https://spreadsheets.google.com/feeds/cells/${tableId}/1/public/full?alt=json`;
 
 	var mypromise = httpGet(url);
-	mypromise.then(parseTableJSON, function(e){console.log("errore"); console.log(e)});
+	// mypromise.then(parseTableJSON, function(e){console.log("errore"); console.log(e);});
+	mypromise.then(parseTableJSON, fail);
 	// parseTableJSON(JSON.stringify(tableJSON));
 }
 
