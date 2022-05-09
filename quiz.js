@@ -40,7 +40,7 @@ function getResponse() {
 }
 
 function f() {
-    alert("Attenzione, il sito non funziona bene e sta usando una lista di domande di backup che potrebbe non essere aggiornata.")
+//    alert("Attenzione, il sito non funziona bene e sta usando una lista di domande di backup che potrebbe non essere aggiornata.")
     tutteDomande = JSON.parse(backupJSON);
     main();
 }
